@@ -19,7 +19,9 @@ class Author
         post.author = self
     end
 
-    def posts
+    # Use this method to leverage the Post class for #all items instead of having to use two arrays to keep track of them in the main class
+
+    def posts 
         Post.all.select {|post| post.author == self}
     end
 
